@@ -24,5 +24,22 @@ class ToDoViewModel: ViewModel() {
         getAllToDo()
     }
 
+    fun onCheckedClick(toDo: ToDoModel) {
+        ToDoManager.onCheckedClick(toDo)
+        getAllToDo()
+    }
+
+    fun getCountIsCompleted(): Int {
+        return ToDoManager.getCountIsCompleted()
+    }
+
+    fun getCountIsNotCompleted(): Int {
+        return ToDoManager.getCountIsNotCompleted()
+    }
+
+    fun getCountAll(): Int {
+        return ToDoManager.getCountAll()
+    }
+
 
 }
